@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar con Hamburger Menu</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/añadirJuegos.css">
+
+ 
+</head>
+
+<body background="Image/fondo.jpg">
+  <div class="navbar">
+    <!-- El menú hamburguesa a la izquierda -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span class="contenter">
+        <div></div>
+        <div></div>
+        <div></div>
+      </span>
+    </div>
+    <img src="Image/Logo.png" id="logoImg">
+  </div>
+
+  <!-- Sidebar (menú lateral que se desliza desde la izquierda) -->
+  <div class="sidebar">
+    <div style="width: 100%; height: 2rem;"></div>
+    <a href="inicio.html"><img src="Image/Home.png"></a>
+    <a href="juegos.html"><img src="Image/Dribbble.png"></a>
+    <a href="añadirJuego.html"><img src="Image/File plus.png"></a>
+  </div>
+
+  <div class="footer">
+    <img src="Image/Logo Bachillerato Impulso - RGB_page-0001-PhotoRoom.png" alt="" class="logofooter">
+  </div>
+
+  <div style="overflow-y: auto;">
+    
+    <div class="folmu">
+      <form id="formularioTarjeta">
+        <label >Título:</label><br>
+        <input type="text" class="titulo" name="titulo" id="tituloF"><br>
+        
+        <label >Enlace:</label><br>
+        <input type="text" class="titulo" name="enlace" id="enlaceF"><br>
+        
+        <label >Portada (Seleccionar imagen):</label><br>
+        <input type="file" class="arch" id="archivoF" name="arch"><br>
+
+        <label >Autor:</label><br>
+        <input type="text" class="des" name="autor" id="autorF"><br>
+        
+        <label >Descripción:</label><br>
+        <input type="text" class="des" name="descripcion" id="descripcionF"><br>
+        
+        <label >Categoría:</label><br>
+        <select type="text" class="cat" id="categoriaF" name="cat">
+          <option value="Null"></option>
+          <option value="mt">Misiones o Tareas</option>
+          <option value="noInte">No interactivo</option>
+          <option value="plat">Plataformas</option>
+          <option value="puzz">Puzzles</option>
+          <option value="time">Tiempo Límite</option>
+          <option value="carr">Carreras</option>
+          <option value="sim">Simulador</option>
+        </select>
+        
+        <input type="submit" class="enviar" id="sub">
+      </form>
+    </div>
+    
+
+  </div>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <!-- Script del menú hamburguesa -->
+  <script src="js/scriptMenu.js"></script>
+  <script src="js/agregarTarjeta.js"></script>
+</body>
+</html>

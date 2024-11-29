@@ -1,0 +1,148 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+ 
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.navbar {
+  background-color: #ffffff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 10px;
+  position: relative;
+  border-bottom: solid 1px;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  background-color: #066AB5;
+  width: 32px;
+  height: 32px;
+  padding: 10px;
+  z-index: 2; /* Asegura que esté encima del contenido */
+  border-radius: 100%;
+  align-content: center;
+  text-align: center;
+}
+
+#logoImg {
+  position: relative;
+  margin: 0 auto;
+  width: 240px;
+  left: -10px;
+}
+
+.hamburger div {
+  width: 28px;
+  height: 3px;
+  background-color: white;
+  margin: 8px 0;
+}
+
+.contenter {
+  position: relative;
+  margin: 0 auto;
+  top: -4px;
+}
+
+/* Sidebar (menú lateral que se desliza desde la izquierda) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px; /* Inicia fuera de la pantalla */
+  width: 250px;
+  height: 100%;
+  background-color: #066AB5;
+  transition: 0.3s; /* Transición suave al mostrar el menú */
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 15px 0 0 0;
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+
+.sidebar.active {
+  left: 0; /* Cuando se activa, se desliza desde la izquierda */
+}
+
+@media screen and (max-width: 768px) {
+  .navbar .hamburger {
+    display: flex; /* Asegura que el icono de hamburguesa se muestre en pantallas pequeñas */
+  }
+
+  .sidebar a {
+    padding: 15px;
+  }
+}
+.sidebar a:hover {
+  background-color: #004b8a;  /* Cambia el color de fondo cuando se pasa el mouse */
+  color: #ffffff;  /* Asegura que el color del texto siga siendo blanco */
+  text-decoration: underline;  /* Agrega un subrayado */
+  transition: background-color 0.3s ease;  /* Transición suave para el cambio de color */
+}
+
+.footer {
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  border-top: solid 1px;
+}
+
+.logofooter {
+  width: 100px;
+  margin-left: 10px;
+}
+
+.content {
+  position: relative;
+  margin-left: 2%;
+  margin-right: auto;
+  margin-top: 2%;
+  width: 96%;
+  height: 200px;
+  background-color: white;
+  border-radius: 10px;
+  
+  
+  line-height: 22px;
+  font-family: 'Inter';
+  font-size: 12px;
+  text-align: left;
+  padding-top: 10px;
+ 
+}
+.content *{
+  margin-left: 4rem;
+  margin-right: auto;
+
+}
+
+.titleOf{
+
+  margin-top: 10px;
+  font-weight: bold;
+
+}
+.contentInside{
+  width: 80%;
+}
